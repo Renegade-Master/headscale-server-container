@@ -15,5 +15,5 @@ fi
 # Delete a User
 podman exec -it \
     "${name_server}" \
-    headscale node destroy \
+    headscale node delete \
         --identifier "${node_id}"
