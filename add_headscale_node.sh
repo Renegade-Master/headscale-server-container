@@ -19,4 +19,5 @@ fi
 podman exec -it \
     "${name_server}" \
     headscale auth register \
-        --auth-id "${auth_id}"
+        --auth-id "${auth_id}" \
+        --user "${user_name}"
