@@ -35,3 +35,5 @@ wget --output-document "${headplane_data_dir}/config/config.yaml" "${headplane_c
 
 print_msg "Creating Headscale Policy File..."
 printf "{}\n" > "${headscale_data_dir}/config/policy.json"
+
+print_msg "Cleanup complete!"
