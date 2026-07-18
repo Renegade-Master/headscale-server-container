@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set +x -eu -o pipefail
 
-source "$(pwd)/common.sh"
+source "$(dirname $0)/common.sh"
 
 # Get User Information
 read -p "Enter the name for the new User [default: user]: " user_name
@@ -21,7 +21,7 @@ fi
 
 # Add a User
 podman exec -it \
-    "${name_server}" \
+    "${headscale_name}" \
     headscale users create \
         --display-name "${user_display_name}" \
         --email "${user_email}" \

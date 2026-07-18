@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set +x -eu -o pipefail
 
-source "$(pwd)/common.sh"
+source "$(dirname $0)/common.sh"
 
 # Get the Username
 read -p "Enter the Username for the User to be added to a Node: " user_name
@@ -17,7 +17,7 @@ fi
 
 # Add a Node to a User
 podman exec -it \
-    "${name_server}" \
+    "${headscale_name}" \
     headscale auth register \
         --auth-id "${auth_id}" \
         --user "${user_name}"

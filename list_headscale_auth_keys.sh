@@ -3,7 +3,7 @@ set +x -eu -o pipefail
 
 source "$(dirname $0)/common.sh"
 
-# List all Users
+# List all API Keys
 podman exec -it \
     "${headscale_name}" \
-    headscale nodes list
+    headscale preauthkeys list
