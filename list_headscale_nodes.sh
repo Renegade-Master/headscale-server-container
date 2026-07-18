@@ -5,5 +5,5 @@ source "$(pwd)/common.sh"
 
 # List all Users
 podman exec -it \
-    "${name_server}" \
+    "${headscale_name}" \
     headscale nodes list

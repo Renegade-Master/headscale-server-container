@@ -27,6 +27,16 @@ Set of scripts to help with setup and management of a Headscale (OpenSource Tail
     ./add_headscale_user.sh
     ```
 
+## Configuration UIs
+
+By default, there is no web-ui available for Headscale. Some are listed [here](https://headscale.net/stable/ref/integration/web-ui/).
+
+Personal recommendations:
+
+* [Headplane](https://github.com/tale/headplane)
+* [Headscale Manager](https://github.com/hkdone/headscalemanager)
+
 ## References
 
 * [Headscale: Install Container](https://headscale.net/stable/setup/install/container/)
+* [Headplane: Docker Installation](https://headplane.net/install/docker)

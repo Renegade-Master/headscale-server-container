@@ -21,7 +21,7 @@ fi
 
 # Add a User
 podman exec -it \
-    "${name_server}" \
+    "${headscale_name}" \
     headscale users create \
         --display-name "${user_display_name}" \
         --email "${user_email}" \

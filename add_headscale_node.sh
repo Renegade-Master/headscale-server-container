@@ -17,7 +17,7 @@ fi
 
 # Add a Node to a User
 podman exec -it \
-    "${name_server}" \
+    "${headscale_name}" \
     headscale auth register \
         --auth-id "${auth_id}" \
         --user "${user_name}"
