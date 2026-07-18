@@ -6,9 +6,11 @@ Set of scripts to help with setup and management of a Headscale (OpenSource Tail
 
 1. Run the `clean.sh` script to prepare the envrionment
 
-2. Required changes to the `config.yaml` file:
-    * Expose the Server by changing the `server_url` to your Server's Public IP, or Domain
-    * Expose the HTTP ports by changing the `listen_addr` and `metrics_listen_addr` to `0.0.0.0` or your chosen Interface address.
+2. Required changes to the Headscale `config.yaml` file:
+    * `server_url`: Should be your Server's Public IP, or Domain
+    * `listen_addr`: Should be `0.0.0.0` (or your chosen Network Interface address) to expose
+    * `metrics_listen_addr`: Should be `127.0.0.1` to remain hidden, or `0.0.0.0` (or your chosen Network Interface address) to expose
+    * `grpc_listen_addr`: Should be `127.0.0.1` to remain hidden, or `0.0.0.0` (or your chosen Network Interface address) to expose
 
 3. Run the Headscale Server using the following command:
     ```shell
@@ -33,6 +35,13 @@ Personal recommendations:
 
 * [Headplane](https://github.com/tale/headplane)
 * [Headscale Manager](https://github.com/hkdone/headscalemanager)
+
+### Configuring Headplane:
+
+Required changes to the Headplane configuration file include:
+* `cookie_secure`: Should be `true` only if Headscale is serving over HTTPS
+* `headscale.url`: The port should match whatever Port Headscale is serving on
+* `integration.docker.enabled`: Should be `true` for easiest integration
 
 ## Troubleshooting
 
