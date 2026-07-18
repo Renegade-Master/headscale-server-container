@@ -19,7 +19,7 @@ podman run \
   --network "headscale" \
   --volume "${headplane_data_dir}/config/config.yaml":"/etc/headplane/config.yaml:Z" \
   --volume "${headplane_data_dir}/lib/":"/var/lib/headplane:Z" \
-  --volume "${headscale_data_dir}/config/config.yaml:/etc/headscale/config.yaml" \
+  --volume "${headscale_data_dir}/config/config.yaml:/etc/headscale/config.yaml:Z" \
   --volume "/var/run/user/1000/podman/podman.sock:/var/run/docker.sock:ro" \
   --publish "${server_port}:3000/tcp" \
   --health-cmd "CMD /bin/hp_healthcheck" \
