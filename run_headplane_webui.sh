@@ -14,9 +14,10 @@ fi
 
 # Start Headscale server process
 podman run \
-  --name="${headplane_name}" \
+  --name "${headplane_name}" \
   --volume "${headplane_data_dir}/config/config.yaml":"/etc/headplane/config.yaml:Z" \
   --volume "${headplane_data_dir}/lib/":"/var/lib/headplane:Z" \
+  --volume "${headscale_data_dir}/config/config.yaml:/etc/headscale/config.yaml" \
   --publish "${server_port}:3000/tcp" \
   --health-cmd "CMD /bin/hp_healthcheck" \
   --restart "unless-stopped" \

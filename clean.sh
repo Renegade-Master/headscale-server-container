@@ -7,6 +7,9 @@ source "$(dirname $0)/common.sh"
 podman stop "${headscale_name}" && podman rm "${headscale_name}" || true
 podman stop "${headplane_name}" && podman rm "${headplane_name}" || true
 
+podman network rm headscale
+podman network create headscale
+
 print_msg "Moving [data] folder..."
 mkdir -p "${work_dir}/.bak"
 mv "${work_dir}/data" "${work_dir}/.bak/data-$(date +%Y%m%dT%H%M%SZ)" || true

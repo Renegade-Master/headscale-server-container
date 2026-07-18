@@ -14,7 +14,8 @@ fi
 
 # Start Headscale server process
 podman run \
-  --name="${headscale_name}" \
+  --name "${headscale_name}" \
+  --label "me.tale.headplane.target=headscale" \
   --volume "${headscale_data_dir}/config":"/etc/headscale:Z" \
   --volume "${headscale_data_dir}/lib":"/var/lib/headscale:Z" \
   --publish "${server_port}:8080/tcp" \
