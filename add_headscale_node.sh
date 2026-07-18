@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set +x -eu -o pipefail
 
-source "$(pwd)/common.sh"
+source "$(dirname $0)/common.sh"
 
 # Get the Username
 read -p "Enter the Username for the User to be added to a Node: " user_name

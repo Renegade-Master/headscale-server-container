@@ -11,6 +11,7 @@ Set of scripts to help with setup and management of a Headscale (OpenSource Tail
     * `listen_addr`: Should be `0.0.0.0` (or your chosen Network Interface address) to expose
     * `metrics_listen_addr`: Should be `127.0.0.1` to remain hidden, or `0.0.0.0` (or your chosen Network Interface address) to expose
     * `grpc_listen_addr`: Should be `127.0.0.1` to remain hidden, or `0.0.0.0` (or your chosen Network Interface address) to expose
+    * `policy.path`: If setting [Policies](https://headscale.net/stable/ref/policy/), this should be set to something like `/etc/headscale/policy.json`
 
 3. Run the Headscale Server using the following command:
     ```shell

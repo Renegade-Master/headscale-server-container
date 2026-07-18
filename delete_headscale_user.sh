@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set +x -eu -o pipefail
 
-source "$(pwd)/common.sh"
+source "$(dirname $0)/common.sh"
 
 # List Users
 ${work_dir}/list_headscale_users.sh
