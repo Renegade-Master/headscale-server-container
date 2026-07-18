@@ -4,27 +4,25 @@ Set of scripts to help with setup and management of a Headscale (OpenSource Tail
 
 ## Running
 
-1. Create the required directories in the repo directory:
+1. Run the `clean.sh` script to prepare the envrionment
 
-    ```sh
-    mkdir -p ./data/{config,lib}
-    ```
-
-2. Download the version of the configuration file that relates to the version of Headscale used for the Server (e.g. `v0.29.2`)
-    * [Headscale: Configuration](https://headscale.net/stable/ref/configuration/)
-
-3. Required changes to the `config.yaml` file:
+2. Required changes to the `config.yaml` file:
     * Expose the Server by changing the `server_url` to your Server's Public IP, or Domain
     * Expose the HTTP ports by changing the `listen_addr` and `metrics_listen_addr` to `0.0.0.0` or your chosen Interface address.
 
-4. Run the Headscale Server using the following command:
+3. Run the Headscale Server using the following command:
     ```shell
     ./run_headscale_server.sh
     ```
 
-5. Add new Users to the Headscale Server using the following command:
+4. Add new Users to the Headscale Server using the following command:
     ```shell
     ./add_headscale_user.sh
+    ```
+
+5. Optionally, it is possible to run a Headplane Web UI using the following command:
+    ```shell
+    ./run_headplane_webui.sh
     ```
 
 ## Configuration UIs
@@ -35,6 +33,10 @@ Personal recommendations:
 
 * [Headplane](https://github.com/tale/headplane)
 * [Headscale Manager](https://github.com/hkdone/headscalemanager)
+
+## Troubleshooting
+
+Enable Podman Socket for Headplane: `systemctl --user enable --now podman.socket`
 
 ## References
 

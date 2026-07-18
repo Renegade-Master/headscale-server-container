@@ -15,6 +15,7 @@ fi
 # Start Headscale server process
 podman run \
   --name "${headplane_name}" \
+  --detach \
   --network "headscale" \
   --volume "${headplane_data_dir}/config/config.yaml":"/etc/headplane/config.yaml:Z" \
   --volume "${headplane_data_dir}/lib/":"/var/lib/headplane:Z" \
