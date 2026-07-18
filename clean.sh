@@ -9,7 +9,6 @@ podman stop "${headscale_name}" && podman rm "${headscale_name}" || true
 podman stop "${headplane_name}" && podman rm "${headplane_name}" || true
 print_msg "Containers removed."
 
-
 print_msg "Recreating the Headscale Network..."
 podman network rm headscale || true
 podman network create headscale
