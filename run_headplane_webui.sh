@@ -6,10 +6,14 @@ source "$(dirname $0)/common.sh"
 # Exit any existing Headscale Containers
 podman stop "${headplane_name}" && podman rm "${headplane_name}" || true
 
-# Enter a Port to expose
-read -p "Enter the Port that the Server should listen on for new connections [default: 3000]: " server_port
-if [[ ${server_port} == "" ]]; then
-    server_port="3000"
+if [[ -z $1 ]]; then
+    # Enter a Port to expose
+    read -p "Enter the Port that the Server should listen on for new connections [default: 3000]: " server_port
+    if [[ ${server_port} == "" ]]; then
+        server_port="3000"
+    fi
+else
+    server_port="$1"
 fi
 
 # Start Headscale server process
