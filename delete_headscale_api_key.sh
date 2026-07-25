@@ -4,7 +4,7 @@ set +x -eu -o pipefail
 source "$(dirname $0)/common.sh"
 
 # List API Keys
-${work_dir}/list_headscale_auth_keys.sh
+${work_dir}/list_headscale_api_keys.sh
 
 # Get API Key Identifier
 read -p "Enter the ID for the API Key to be deleted: " api_key_id

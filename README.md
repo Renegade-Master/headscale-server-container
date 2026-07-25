@@ -50,5 +50,11 @@ Enable Podman Socket for Headplane: `systemctl --user enable --now podman.socket
 
 ## References
 
+### Installation
+
 * [Headscale: Install Container](https://headscale.net/stable/setup/install/container/)
 * [Headplane: Docker Installation](https://headplane.net/install/docker)
+
+### Policy File
+
+* https://tailscale.com/docs/reference/syntax/policy-file
