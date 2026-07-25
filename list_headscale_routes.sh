@@ -3,9 +3,7 @@ set +x -eu -o pipefail
 
 source "$(dirname $0)/common.sh"
 
-if [[ #? -eq 1 ]]; then
-
-# List all Users
+# List all Routes
 podman exec -it \
     "${headscale_name}" \
-    headscale users list
+    headscale routes list

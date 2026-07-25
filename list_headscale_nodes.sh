@@ -3,7 +3,15 @@ set +x -eu -o pipefail
 
 source "$(dirname $0)/common.sh"
 
-# List all Nodes
-podman exec -it \
-    "${headscale_name}" \
-    headscale nodes list
+if [[ ${#?} -eq 0 ]]; then
+    # List all Nodes
+    podman exec -it \
+        "${headscale_name}" \
+        headscale nodes list
+else
+    # List all Nodes for a User
+    podman exec -it \
+        "${headscale_name}" \
+        headscale nodes list \
+          --user "${1}"
+fi

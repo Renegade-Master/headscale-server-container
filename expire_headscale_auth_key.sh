@@ -17,9 +17,3 @@ podman exec -it \
     "${headscale_name}" \
     headscale preauthkeys expire \
         --id "${preauth_key_id}"
-
-# Delete a PreAuth Key
-podman exec -it \
-    "${headscale_name}" \
-    headscale preauthkeys delete \
-        --id "${preauth_key_id}"

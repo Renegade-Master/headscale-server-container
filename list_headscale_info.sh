@@ -12,5 +12,8 @@ ${work_dir}/list_headscale_auth_keys.sh
 # List Nodes
 ${work_dir}/list_headscale_nodes.sh
 
+# List Routes
+${work_dir}/list_headscale_routes.sh
+
 # List Users
 ${work_dir}/list_headscale_users.sh

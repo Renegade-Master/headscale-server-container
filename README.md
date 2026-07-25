@@ -58,3 +58,7 @@ Enable Podman Socket for Headplane: `systemctl --user enable --now podman.socket
 ### Policy File
 
 * https://tailscale.com/docs/reference/syntax/policy-file
+
+### General
+
+* [Headscale Setup Guide 2026: Self-Hosted Tailscale](https://vucense.com/privacy-sovereignty/self-hosting/headscale-self-hosted-tailscale-setup-guide-2026/)
