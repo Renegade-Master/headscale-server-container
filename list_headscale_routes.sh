@@ -6,4 +6,4 @@ source "$(dirname $0)/common.sh"
 # List all Routes
 podman exec -it \
     "${headscale_name}" \
-    headscale routes list
+    headscale nodes list-routes

@@ -3,8 +3,6 @@ set +x -eu -o pipefail
 
 source "$(dirname $0)/common.sh"
 
-if [[ #? -eq 1 ]]; then
-
 # List all Users
 podman exec -it \
     "${headscale_name}" \

@@ -3,7 +3,9 @@ set +x -eu -o pipefail
 
 source "$(dirname $0)/common.sh"
 
-if [[ ${#?} -eq 0 ]]; then
+user_id="${1:-"NOT_SET"}"
+
+if [[ $user_id == "NOT_SET" ]]; then
     # List all Nodes
     podman exec -it \
         "${headscale_name}" \
@@ -13,5 +15,5 @@ else
     podman exec -it \
         "${headscale_name}" \
         headscale nodes list \
-          --user "${1}"
+          --user "${user_id}"
 fi
