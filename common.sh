@@ -22,7 +22,7 @@ fail_with_error() {
 }
 
 headscale_image_path="ghcr.io/juanfont/headscale"
-headscale_image_version="v0.29.2"
+headscale_image_version="v0.29.3"
 headscale_image="${headscale_image_path}:${headscale_image_version}"
 
 headplane_image_path="ghcr.io/tale/headplane"

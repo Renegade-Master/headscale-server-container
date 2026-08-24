@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set +x -eu -o pipefail
 
-source "$(dirname $0)/common.sh"
+source "$(dirname $0)/common.sh" || source /home/opc/ws/headscale-server-container/common.sh
 
 # Send command to Headscale
 podman exec -it \
