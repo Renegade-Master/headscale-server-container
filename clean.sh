@@ -27,6 +27,10 @@ print_msg "Creating Headplane [config,lib] folder..."
 mkdir -p "${headplane_data_dir}/config" "${headplane_data_dir}/lib"
 print_msg "[config,lib] folder created."
 
+print_msg "Creating Caddy [data,config] folder..."
+mkdir -p "${caddy_data_dir}/data" "${caddy_data_dir}/config"
+print_msg "[data,config] folder created."
+
 print_msg "Downloading Headscale Configuration File for [${headscale_image_version}]..."
 wget --output-document "${headscale_data_dir}/config/config.yaml" "${headscale_config_url}"
 
