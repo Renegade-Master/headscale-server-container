@@ -11,7 +11,7 @@ podman run \
     --name "${caddy_name}" \
     --detach \
     --network "headscale" \
-    --volume "${work_dir}/caddy/Caddyfile:/etc/caddy/Caddyfile:Z,ro" \
+    --volume "${caddy_data_dir}/Caddyfile:/etc/caddy/Caddyfile:Z,ro" \
     --volume "${caddy_data_dir}/data":"/data:Z" \
     --volume "${caddy_data_dir}/config":"/config:Z" \
     --publish "80:80/tcp" \

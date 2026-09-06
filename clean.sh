@@ -29,6 +29,7 @@ print_msg "[config,lib] folder created."
 
 print_msg "Creating Caddy [data,config] folder..."
 mkdir -p "${caddy_data_dir}/data" "${caddy_data_dir}/config"
+touch "${caddy_data_dir}/Caddyfile"
 print_msg "[data,config] folder created."
 
 print_msg "Downloading Headscale Configuration File for [${headscale_image_version}]..."
